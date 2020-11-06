@@ -1,0 +1,15 @@
+<!--pages/doubleVideos/doubleVideos.wxml-->
+<view class="page">
+  <view wx:for="{{ list }}" id="wrp_{{pageIndex}}" wx:for-index="pageIndex" wx:for-item="listSingleItem" wx:key="index">
+    <view wx:if="{{ listSingleItem.length > 0 }}">   
+      <view class="wrp" wx:for="{{ listSingleItem }}"  wx:for-index="index" wx:for-item="listItem" wx:key="index"> 
+        当前是第{{ listItem.idx }}个元素，为第 {{ pageIndex }} 屏数据
+      </view>
+    </view>
+    <view wx:else style="height: {{ listSingleItem.height}}px">
+    </view>
+  </view>
+</view>
+
+
+
